@@ -7,20 +7,20 @@
 </head>
 <body>
     <h1>Sistema de Identificação</h1>
-    Velocidade por carro <input type="number" name="txtvel" id="txtvel"> km/h
-    <input type="button" value="verificar" onclick="calcular()">
+    Qual seu país de origem? <input type="text" name="nac" id="nac"> Etnão você é 
+    <input type="button" value="identificar" onclick="identificar ()">
     <div id="res"></div>
     <script>
         
-        function calcular () {
-            var txtv = document.querySelector('input#txtvel')
+        function identificar () {
+            var nac = document.querySelector('input#nac')
             var res = document.querySelector('div#res')
-            var vel = Number(txtv.value)
-            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}km/h</strong></p>`
-            if (vel > 60) {
-                res.innerHTML += `<p> Você está sendo <strong>MULTADO</strong> por excesso de velocidade!`
+            var nac = (nac.value)
+            res.innerHTML = `<p>Se vocé é natural do <strong>${nac}.</strong></p>`
+            if (!nac.includes('Brasil')) {
+                res.innerHTML += `<p>Então você é <strong>Estrangeiro. </strong>Então seja muito bem vindo ao Brasil!`
             }
-            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            res.innerHTML += `<p>Conheça pais de ponta a ponta.</p>`
         }
     </script>
     
