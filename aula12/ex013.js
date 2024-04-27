@@ -36,5 +36,5 @@ switch (diaSem) {
         break
     default:
         console.log('Error: Dia inválido!')
-        break // esse break é opcional, pois não tema maisn nenhum comando abaixo dele.
+        break // esse break é opcional, pois não tema mais nenhum comando abaixo dele.
 }
